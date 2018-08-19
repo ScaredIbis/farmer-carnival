@@ -8,28 +8,26 @@ import axios from 'axios';
 
 import jwt from 'jsonwebtoken';
 
-let game;
+
+const game = document.getElementsByTagName('canvas');
 
 export function balloonDarts() {
-  if(game){
-    game.destroy()
-    game = null;
+  if (game.length) {
+    game[0].remove();
   }
   initBalloonDarts();
 }
 
 export function bigWheel() {
-  if(game){
-    game.destroy()
-    game = null;
+  if (game.length) {
+    game[0].remove();
   }
   initBigWheel();
 }
 
 export function clowns() {
-  if(game){
-    game.destroy()
-    game = null;
+  if (game.length) {
+    game[0].remove();
   }
   initClowns();
 }
